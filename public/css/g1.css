@@ -10,13 +10,14 @@ h2 {
 
 ul.team-member-list {
 	text-align: center;
+	list-style-type: none;
 }
 
 li {
 	text-align: center;
 }
 
-embed.proj-spec {
+.container {
 	margin-left: auto;
 	margin-right: auto;
 }
