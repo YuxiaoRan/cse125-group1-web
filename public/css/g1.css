@@ -86,3 +86,12 @@ body {
 .reportpage-btn.right-btn {
 	margin-left: 40px;
 }
+
+.report-content {
+	background: rgba(204, 204, 204, 0.5);
+	width: 1280px;
+	padding: 20px;
+	font-family: calibri;
+	font-size: 20px;
+	line-height: 30px;
+}
