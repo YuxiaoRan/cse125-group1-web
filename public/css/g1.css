@@ -1,11 +1,22 @@
 h1 {
 	text-align: center;
-	color: darkgreen;
+	color: whitesmoke;
 }
 
 h2 {
 	text-align: center;
-	color: lightgreen;
+	color: whitesmoke;
+}
+
+h2.left-text {
+	text-align: left;
+	font-size: 30px;
+	text-decoration: underline;
+}
+
+h3 {
+	text-align: center;
+	color: whitesmoke;
 }
 
 ul.team-member-list {
@@ -17,13 +28,61 @@ ul.team-member-list {
 
 li {
 	text-align: center;
+	color: whitesmoke;
 }
 
 .container {
-	margin: auto;
-	width: 1024px;
+	margin-left: auto;
+	margin-right: auto;
+	width: fit-content;
+	max-width: 1295px;
 }
 
 body {
 	background-image: none;
+	background-color: darkslategray;
+}
+
+.homepage-btn {
+	border: none;
+	border-radius: 20px;
+	width: 400px;
+	height: 280px;
+	background-image: linear-gradient(to right, #25aae1, #40e495);
+	color: whitesmoke;
+	text-align: center;
+	line-height: 280px;
+	text-decoration: none;
+	font-size: 28px;
+	display: inline-block;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	cursor: pointer;
+	outline: none;
+}
+
+.homepage-btn.right-btn {
+	margin-left: 40px;
+}
+
+.reportpage-btn {
+	border: none;
+	border-radius: 20px;
+	width: 400px;
+	height: 200px;
+	background-image: linear-gradient(to right, #f23b3b, #f0bb28);
+	color: whitesmoke;
+	text-align: center;
+	line-height: 200px;
+	text-decoration: none;
+	font-size: 28px;
+	display: inline-block;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	cursor: pointer;
+	outline: none;
+}
+
+.reportpage-btn.right-btn {
+	margin-left: 40px;
 }
