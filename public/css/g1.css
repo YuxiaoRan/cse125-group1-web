@@ -19,6 +19,16 @@ h3 {
 	color: whitesmoke;
 }
 
+h3.left-text {
+	text-align: left;
+	font-size: 28px;
+	text-decoration: underline;
+}
+
+h4 {
+	color: whitesmoke;
+}
+
 ul.team-member-list {
 	text-align: center;
 	list-style-type: none;
