@@ -54,6 +54,10 @@ li {
 	max-width: 1295px;
 }
 
+.img-container {
+	text-align: center;
+}
+
 body {
 	background-image: none;
 	background-color: darkslategray;
