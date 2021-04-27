@@ -59,7 +59,7 @@ li {
 }
 
 body {
-	background-image: none;
+	background: transparent;
 	background-color: darkslategray;
 }
 
@@ -121,6 +121,21 @@ img.homepage-img {
 	margin-left: auto 0;
 	margin-right: auto 0;
 	margin-top: 30px;
+	background: none;
+}
+
+img.homepage-home-btn {
+	max-width: 40px;
+	position: absolute;
+	top: 20px;
+	left: 15px;
+}
+
+img.homepage-github-btn {
+	max-width: 40px;
+	position: absolute;
+	top: 18px;
+	left: 70px;
 }
 
 iframe.homepage-video {
