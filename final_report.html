@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<title>Weekly Reports</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="./public/css/g1.css?version=10" rel="stylesheet">
+	</head>
+
+	<body>
+    <a href="./index.html">
+			<img class="homepage-home-btn" src="./public/img/common/home_button.png">
+		</a>
+		<a href="https://github.com/ucsd-cse125-sp21/cse125-sp21-group1">
+			<img class="homepage-github-btn" src="./public/img/common/github_button.png">
+		</a>
+		<h1>CSE125 SP21 Group1</h1>
+    <h2>Final Report</h2>
+    <h3>June 11th, 2021</h3>
+		<div class="container">
+      <h3 class="report-text">A. In the project review document, start by addressing these main questions:</h3>
+      <div class="report-content-green-upper">
+          <p>
+<b>1. Game concept: To what extent did your game concept change from initial concept to what you implemented? If it did change, how did it change and why?</b>
+<br><br>
+Our game concept did not change throughout the quarter. Our final product is still the conjectured mvp at the beginning of the quarter.
+<br><br>
+<b>2. Design: How does your final project design compare to the initial design, and what are the reasons for the differences, if any?</b>
+<br><br>
+The final project design is much simpler compared to the initial design. Due to time constraints, we weren't able to finish everything we planned to. We planned to have features including glove, flozen, fire, landmine, etc., but ended up only being able to finish the basic ones such as shield, elixir, and ball.
+<br><br>
+<b>3. Schedule: How does your final schedule compare with your projected schedule, and what are the reasons for the differences, if any? (You should be able to glean this from your status reports.)</b>
+<br><br>
+Sadly our schedule was much behind. We attribute it to the lack of communication due to the online environment, that we were only able to meet each other virtually, and there existed several miscommunication problems, and multiple people were working on the same thing at the same time due to misunderstanding.
+          </p>
+      </div>
+
+      <h3 class="report-text-lower">B. Then address these more general questions:</h3>
+      <div class="report-content-pink-internal">
+          <p>
+<b>1. What software methodology and group mechanics decisions worked out well, and which ones did not? Why?</b>
+<br><br>
+Separating the software into parts and having different people working on different parts worked very well. Having all the decisions decided during meetings worked well as well so that all the group members know what will be the next step. What didn’t work well was our estimation of the velocity. There were more troubles than we expected, so we should have had more meetings to solve the problems more frequently and thus be able to move on.
+<br><br>
+<b>2. Which aspects of the implementation were more difficult than you expected, and which were easier? Why?</b>
+<br><br>
+The graphics part was more difficult than we expected. We spent a long time changing the rendering library. The models weren’t loaded correctly until a few days before the demo.<br>
+The backend part was easier. The game logic is progressive. Once we have designed our basic game logic, we could start work on the logic to generate the game board and do some initializations; afterwards, we could add features one by one without interfering with the others.
+<br><br>
+<b>3. Which aspects of the project are you particularly proud of? Why?</b>
+<br><br>
+The bomb exploding feature. It explodes automatically after some time after the bomb placement without users’ needing to check.
+<br><br>
+<b>4. What was the most difficult software problem you faced, and how did you overcome it (if you did)?</b>
+<br><br>
+The most difficult software problem we faced was the latency due to extensive graphics computation. We have not overcome this problem due to the time constraints. However, we thought about possible issues. We loaded too many models at the same time, around 489 models. The model’s obj file is already 100MB. Perhaps we can load less models, or shrink the models.
+<br><br>
+<b>5. If you used an implementation language other than C++, describe the environments, libraries, and tools you used to support development in that language. What issues did you run into when developing in that language? Would you recommend groups use the language in the future? If so, how would you recommend groups best proceed to make it as straightforward as possible to use the language? And what should groups avoid?</b>
+<br><br>
+We used glsl for the shaders.
+<br><br>
+<b>6. How many lines of code did you write for your project? (Do not include code you did not write, such as library source.) Use any convenient mechanism for counting, but state how you counted.</b>
+<br><br>
+Around 2114 lines.<br>
+Our implementation is splitted into three parts, client, server, and common. We count each part separately using github, and add them together.<br>
+On the client side, excluding graphics, there are about 350 lines. The graphics part uses 984 lines.<br>
+On the server side, there are about 281 lines.<br>
+The common part has around 499 lines.
+          </p>
+      </div>
+      <div class="report-content-green-internal">
+          <p>
+<b>7. In developing the media content for your project, you relied upon a number of tools ranging from the DirectX/OpenGL libraries to modeling software. And you likely did some troubleshooting to make it all work. So that students in future years can benefit from what you learned, please detail your tool chain for modeling, exporting, and loading meshes, textures, and animations. Be specific about the tools and versions, any non-obvious steps you had to take to make it work (e.g., exporting from the tool in a specific manner), and any features or operations you specifically had to avoid — in other words, imagine that you were tutoring someone on how to use the toolchain you used to make it all work. Also, for the tools you did use, what is your opinion of them? Would you use them again, or look elsewhere? Are there any tools that you used but, looking back, you would avoid?</b>
+<br><br>
+For rendering, we used OpenGL with the Assimp library. The tutorial in LearnOpenGL, chapter loading models is super helpful. In addition to that, we need to load the materials of the object in case of the models that do not have a texture. We also need to adjust our shaders to render the models with material and models with textures correctly. My way of doing this is in the fragment shader, check whether the texture has a color, if not use only material color for the model.
+<br><br>
+<b>8. Would you have rather started with a game engine or would you still prefer to work from scratch?</b>
+<br><br>
+Working from scratch is a special experience for us, and we really appreciate taking CSE125 this quarter. We did complain about not being allowed to use pre-existing game engines at the beginning of the quarter, because at that time, we only had our game ideas and didn’t really understand how to put thoughts into actual implementation. However, game engines cannot provide us with the freedom of choice that we currently have. We learned a lot throughout the process of designing game implementations and the actual implementation. We learned how to split works between different sides to make the game work. Therefore, we would prefer to work from scratch.
+<br><br>
+<b>9. For those who used a networking library (e.g., RakNet or Boost), a physics library (e.g., Bullet), or a GUI library, would you use it again if you were starting over knowing what you know now? Describe any lessons you learned using it (problems that you had to troubleshoot and how you addressed them) for future groups who may use it. If you did not use a library, judging from the experiences of the groups that did, would you have used it in retrospect?</b>
+<br><br>
+For the networking library, we used Asio without Boost. It was not straightforward for the server to simultaneously monitor and receive messages from different clients. However, after it works, it works. I wish that I had looked at the tutorial that Asio provides earlier as the networking logic is very similar to what we need. I would definitely use it again.
+<br><br>
+<b>10. For your group web pages, we used wordpress. Were you satisfied with wordpress, or would you rather have used some other system for maintaining your group web pages? If you had a choice, what other system would you prefer to use (or even just doing everything on your own using HTML, CSS, and JavaScript)?</b>
+<br><br>
+To be honest, our group was not using WordPress to maintain our group web pages. Instead, we were making our own HTML, CSS, and JavaScript files. Even though web development is not the main focus of CSE125, we found it interesting and challenging to design our own website from scratch and learn web technologies along the way. However, looking at other groups' websites, we still think WordPress is a very powerful tool and a more efficient way to maintain web pages.
+<br><br>
+<b>11. Edward introduced using a discord server for the class. Would you recommend that we continue using discord in the future (e.g., even if the next class is in person)?</b>
+<br><br>
+We didn’t use much discord until the end of the quarter. Our in-group communication was maintained using Wechat, so we don’t think discord helped that much in this part. However, the reserving demo machine functionality is really helpful to us. Besides, when needed to communicate with Edward as a group, discord is more efficient than email. In this aspect, we think discord is helpful.
+<br><br>
+<b>12. This quarter was particularly difficult having to do everything remotely. What tools and strategies did you use to collaborate, communicate, and work together?</b>
+<br><br>
+We used Wechat to communicate with each other. Our weekly meetings were held on Zoom.
+          </p>
+      </div>
+      <div class="report-content-pink-lower">
+          <p>
+<b>13. What lessons about group dynamics did you learn about working in such a large group over an extended period of time on a challenging project?</b>
+<br><br>
+Communication is super important. When we might fail to do something in time, we should let the whole group know that as soon as possible, so that we as a whole could look for backups.<br>
+Also, at the beginning of the project, we should all introduce ourselves with our strengths and weaknesses, so that later on, when distributing work among us, it would be easier to maximize productivity.
+<br><br>
+<b>14. Looking back over the past 10 weeks, how would you do things differently, and what would you do again in the same situation?</b>
+<br><br>
+We probably would open a slack workspace and also Trello cards to maintain more effective communication.
+<br><br>
+<b>15. Which courses at UCSD do you think best prepared you for CSE 125?</b>
+<br><br>
+CSE 100 for C++ programming, CSE 124 for networking, CSE 167 for graphics, and CSE 120 for getting a sense of how much work is needed.
+<br><br>
+<b>16. What were the most valuable things that you learned in the class?</b>
+<br><br>
+The experience of having a supportive professor, passionate TA, amazing classmates, and, most importantly, fantastic teammates is the most valuable. This experience is one of its kind. It is an ordinary course, but an unforgettable experience. The memory will accompany us through our toughest times, desperate times, as well as joyful times in our life. It will support us through any obstacles in our future endeavors. We will always remember that we had met wonderful people here, in CSE 125.
+<br><br>
+<b>17. Please post four final screenshots of your game on your group pages for posterity. I will display them on the group web page.</b>
+<br><br>
+          </p>
+      <div class="img-container">
+          <img class="reportpage-img" src="./public/img/proj_spec.png">
+          <img class="reportpage-img" src="./public/img/proj_spec2.png">
+          <img class="reportpage-img" src="./public/img/proj_spec3.png">
+          <img class="reportpage-img-long" src="./public/img/proj_spec4.png">
+      </div>
+      </div>
+
+      <h3 class="report-text-lower">C. Entirely optional, I would appreciate any feedback on the course:</h3>
+      <div class="report-content">
+          <p>
+<b>1. What advice/tips/suggestions would you give students who will take the course next year?</b>
+<br><br>
+Make a clear plan in the beginning and make sure to execute it. Also assign tasks to each member of the group explicitly. Do group coding sessions.
+<br><br>
+<b>2. How can the course be improved for next year?</b>
+<br><br>
+Will be very nice to provide the code of some example projects, especially those which demonstrate the usage of various useful packages.
+<br><br>
+<b>3. Any other comments or feedback?</b>
+<br><br>
+Though this class may not experience the remote teaching style ever, it’s useful to recommend some remote coding techniques in the beginning of the class.
+          </p>
+      </div>
+		</div>
+	</body>
+</html>
